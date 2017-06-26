@@ -9,7 +9,7 @@ Each folder consist of one example.
 
 ## Not Implemented Yet
 
-* Sandpile
+* Sandpile - https://en.wikipedia.org/wiki/Abelian_sandpile_model
 * Forest Fire
 * 1D automata
 * 2D Life (SxBy) version
