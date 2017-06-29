@@ -1,15 +1,16 @@
 # dave.Complexity 
 
-version 0.2.0
+version 0.2.1
 
-dave.Complexity is a set of toy-models written in [p5](https://p5js.org/) 
-that illustrate topics of complex systems studies. 
+[dave.Complexity](https://github.com/sixhat/dave.complexity) is a set of toy-
+models written in [p5](https://p5js.org/)  that illustrate topics of complex
+systems studies.
 
 Each folder consist of one example. 
 
 ## Implemented
 
-* [Sandpile](https://www.sixhat.net/p5/sandpile-Bak%E2%80%93Tang%E2%80%93Wiesenfeld/)
+* [Sandpile](https://www.sixhat.net/p5/sandpile-Bak-Tang-Wiesenfeld/)
 
 * [1D automata](https://www.sixhat.net/p5/automata-1D/)
 
