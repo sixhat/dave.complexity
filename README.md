@@ -9,8 +9,9 @@ Each folder consist of one example.
 
 ## Implemented
 
-* Sandpile - https://en.wikipedia.org/wiki/Abelian_sandpile_model
-* 1D automata - https://en.wikipedia.org/wiki/Elementary_cellular_automaton
+* [Sandpile](https://www.sixhat.net/p5/sandpile-Bak%E2%80%93Tang%E2%80%93Wiesenfeld/)
+
+* [1D automata](https://www.sixhat.net/p5/automata-1D/)
 
 ## Not Implemented Yet
 
