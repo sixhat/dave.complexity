@@ -17,10 +17,10 @@ function setup() {
       sandpile[i][j] = 0;
     }
   }
-  framesPerSecond= 2;
+  framesPerSecond= 4;
   // frameRate(2);
   sliderRange(1, 60, 1);
-  gui = createGui("Sandpile");
+  gui = createGui("Sandpile",10,10);
   gui.addGlobals('framesPerSecond');
 
 }
