@@ -1,6 +1,6 @@
 # dave.Complexity 
 
-version 0.1.0
+version 0.2.0
 
 dave.Complexity is a set of toy-models written in [p5](https://p5js.org/) 
 that illustrate topics of complex systems studies. 
