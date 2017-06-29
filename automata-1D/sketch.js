@@ -18,7 +18,7 @@ function setup() {
   stroke(255);
 
   sliderRange(1, 255, 1);
-  gui = createGui("Sandpile", matasize + 10, 10);
+  gui = createGui("Sandpile", 10, 10);
   gui.addGlobals('framesPerSecond', 'rule', 'randomizedStart');
 
 }
