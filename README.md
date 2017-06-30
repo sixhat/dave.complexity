@@ -1,6 +1,6 @@
 # dave.Complexity 
 
-version 0.2.4
+version 0.3.0
 
 [dave.Complexity](https://github.com/sixhat/dave.complexity) is a set of toy-models
 written in [p5](https://p5js.org/) that illustrate topics in complex systems.
@@ -11,12 +11,12 @@ Each folder consists of one example.
 
 * [Sandpile](https://www.sixhat.net/p5/dave.complexity/sandpile-Bak-Tang-Wiesenfeld/)
 * [1D automata](https://www.sixhat.net/p5/dave.complexity/automata-1D/)
+* [Bak-Sneppen species evolution](https://www.sixhat.net/p5/dave.complexity/evolution-soc-Bak-Sneppen/)
 
 ## Not Implemented Yet (@todo)
 
 * Forest Fire
 * 2D Life (SxBy) version
-* Per Bak species evolution
 * Fractals
 * Koch curve or snowflake
 * Sponge
@@ -33,4 +33,6 @@ of these examples
 * [p5.gui](https://github.com/bitcraftlab/p5.gui) is licensed under MIT.
 * [Hsluv](https://github.com/hsluv/hsluv) is licensed under MIT.
 * [Quicksettings.js](https://github.com/bit101/quicksettings) is licensed under MIT.
+<!-- * [underscore.js](http://underscorejs.org/) is licensed under MIT. -->
+
 

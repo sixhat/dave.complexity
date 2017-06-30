@@ -7,22 +7,28 @@ var sandpile = new Array(500),
   framesPerSecond;
 
 function setup() {
-  // colorMode(HSB, 100);
-  createCanvas(500, 500);
+  var canvas = createCanvas(500, 500);
+  canvas.parent('p5-canvas-holder');
+  canvas.mouseClicked(restart);
+
   pixelDensity(1);
   background(0);
-  for (var i = 0; i < 500; i++) {
-    sandpile[i] = new Array(500);
-    for (var j = 0; j < 500; j++) {
-      sandpile[i][j] = 0;
-    }
-  }
+  restart();
   framesPerSecond= 4;
   // frameRate(2);
   sliderRange(1, 60, 1);
   gui = createGui("Sandpile",10,10);
   gui.addGlobals('framesPerSecond');
 
+}
+
+function restart(){
+  for (var i = 0; i < 500; i++) {
+    sandpile[i] = new Array(500);
+    for (var j = 0; j < 500; j++) {
+      sandpile[i][j] = 0;
+    }
+  }
 }
 
 function draw() {
@@ -69,16 +75,6 @@ function draw() {
       text(i, 7+i*20,485);
     }
 }
-
-// function mousePressed() {
-//   _loop = !_loop;
-//   if (_loop){
-//     loop();
-//   } else {
-//     noLoop();
-//   }
-// }
-
 
 
 function topple() {

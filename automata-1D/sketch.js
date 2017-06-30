@@ -6,7 +6,10 @@ var matasize = 500,
   randomizedStart = false;
 
 function setup() {
-  createCanvas(matasize, matasize);
+  var canvas =createCanvas(matasize, matasize);
+  canvas.parent('p5-canvas-holder');
+  canvas.mouseClicked(initialize);
+
   pixelDensity(1);
   background(0);
   for (var i = automata2.length - 1; i >= 0; i--) {
@@ -100,6 +103,3 @@ function initialize() {
 
 }
 
-function mouseReleased() {
-  initialize();
-}

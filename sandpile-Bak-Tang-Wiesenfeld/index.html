@@ -2,8 +2,9 @@
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
     <script src="libs/quicksettings.js"></script>
     <script src="libs/p5.gui.js"></script>
@@ -12,8 +13,39 @@
     <script src="libs/hsluv.min.js"></script>
     <script src="libs/p5.dave.js"></script>
     <script src="sketch.js"></script>
-  <style> body {padding: 0; margin: 0; background: black; text-align: center;} </style>
+  <style> 
+    * {
+      font-family: 'PT Sans', sans-serif;
+    }
+    body {padding: 0; margin: 0; background: black; text-align: center; } 
+    div#description {
+      max-width: 700px;
+      color: lightgray;
+      margin: 0 auto;
+      text-align: justify;
+      padding: 20px;
+    }
+    em, A {
+      color:teal;
+      text-decoration: none;
+    }
+  </style>
+  <title>Bak–Tang–Wiesenfeld Sanpile Model</title>
   </head>
   <body>
+    <div id='p5-canvas-holder'></div>
+      <div id='description'>
+      <h1>Bak–Tang–Wiesenfeld Sanpile Model</h1>
+ from <a href="https://en.wikipedia.org/wiki/Abelian_sandpile_model">Wikipedia</a>:
+      <blockquote>
+       ``The model is a cellular automaton. In its original formulation, each site on a finite grid has an associated value that corresponds to the slope of the pile. This slope builds up as "grains of sand" (or "chips") are randomly placed onto the pile, until the slope exceeds a specific threshold value at which time that site collapses transferring sand into the adjacent sites, increasing their slope.''
+      </blockquote>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Use the sliders to change rule of the automaton</li>
+        <li>Drag sliders box to reposition</li>
+        <li>Click in the simulation to restart</li>
+      </ul>
+    </div>
   </body>
 </html>
