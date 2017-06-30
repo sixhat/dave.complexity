@@ -37,7 +37,7 @@ function draw() {
   // 
   if (drawOrigin) {
     for (var i = population.length - 1; i >= 0; i--) {
-      strokeHsluv(population[i]*160, 80, 35);
+      strokeHsluv(population[i] * 160, 80, 35);
       line(i, (1 - population[i]) * 500, i, (1 - populationOrigin[i]) * 500);
     }
   }

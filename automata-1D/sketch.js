@@ -8,7 +8,7 @@ var matasize = 500,
   colorDifferent = false;
 
 function setup() {
-  var canvas =createCanvas(matasize, matasize);
+  var canvas = createCanvas(matasize, matasize);
   canvas.parent('p5-canvas-holder');
   canvas.mouseClicked(initialize);
 
@@ -30,7 +30,7 @@ function setup() {
 
 function draw() {
   frameRate(framesPerSecond);
-  var ruleString = rule.toString(2)
+  var ruleString = rule.toString(2);
   while (ruleString.length < 8) {
     ruleString = "0" + ruleString;
   }
@@ -44,7 +44,6 @@ function draw() {
     noStroke();
     fill(0);
     rect(i, frameCount % matasize, matasize, 1);
-
 
     var _prev = "" + automata1[(i + matasize - 1) % matasize] + automata1[i] + automata1[(i + 1) % matasize];
     // print(i,_prev);
@@ -76,20 +75,18 @@ function draw() {
       break;
     }
 
-     if (automata1[i]) {
-      if (colorDifferent){
-        if (automata1[i]===automata2[i]) stroke(255);
-        if (automata1[i]!==automata2[i]) stroke(255,0,0);  
+    if (automata1[i]) {
+      if (colorDifferent) {
+        if (automata1[i] === automata2[i]) stroke(255);
+        if (automata1[i] !== automata2[i]) stroke(255, 0, 0);
       } else {
         stroke(255);
       }
-      
+
       point(i, frameCount % matasize);
     }
 
   }
-
-
 
   for (var i = automata1.length - 1; i >= 0; i--) {
     automata1[i] = automata2[i];
@@ -117,4 +114,3 @@ function initialize() {
   }
 
 }
-
