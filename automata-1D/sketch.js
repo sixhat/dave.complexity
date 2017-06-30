@@ -14,7 +14,7 @@ function setup() {
 
   pixelDensity(1);
   background(0);
-  for (var i = automata2.length - 1; i >= 0; i--) {
+  for (let i = automata2.length - 1; i >= 0; i--) {
     automata1[i] = 0;
     automata2[i] = 0;
   }
@@ -23,7 +23,7 @@ function setup() {
   stroke(255);
 
   sliderRange(1, 255, 1);
-  gui = createGui("Sandpile", 10, 10);
+  gui = createGui('Sandpile', 10, 10);
   gui.addGlobals('framesPerSecond', 'rule', 'randomizedStart', 'colorDifferent');
 
 }
@@ -32,7 +32,7 @@ function draw() {
   frameRate(framesPerSecond);
   var ruleString = rule.toString(2);
   while (ruleString.length < 8) {
-    ruleString = "0" + ruleString;
+    ruleString = '0' + ruleString;
   }
   // print(ruleString);
 
@@ -40,45 +40,49 @@ function draw() {
 
   // print(automata1);
 
-  for (var i = 0; i < automata1.length; i++) {
+  for (let i = 0; i < automata1.length; i++) {
     noStroke();
     fill(0);
     rect(i, frameCount % matasize, matasize, 1);
 
-    var _prev = "" + automata1[(i + matasize - 1) % matasize] + automata1[i] + automata1[(i + 1) % matasize];
+    var _prev = '' + automata1[(i + matasize - 1) % matasize] + automata1[i] + automata1[(i + 1) % matasize];
     // print(i,_prev);
 
     switch (_prev) {
-    case "111":
+    case '111':
       automata2[i] = parseInt(ruleString[0]);
       break;
-    case "110":
+    case '110':
       automata2[i] = parseInt(ruleString[1]);
       break;
-    case "101":
+    case '101':
       automata2[i] = parseInt(ruleString[2]);
       break;
-    case "100":
+    case '100':
       automata2[i] = parseInt(ruleString[3]);
       break;
-    case "011":
+    case '011':
       automata2[i] = parseInt(ruleString[4]);
       break;
-    case "010":
+    case '010':
       automata2[i] = parseInt(ruleString[5]);
       break;
-    case "001":
+    case '001':
       automata2[i] = parseInt(ruleString[6]);
       break;
-    case "000":
+    case '000':
       automata2[i] = parseInt(ruleString[7]);
       break;
     }
 
     if (automata1[i]) {
       if (colorDifferent) {
-        if (automata1[i] === automata2[i]) stroke(255);
-        if (automata1[i] !== automata2[i]) stroke(255, 0, 0);
+        if (automata1[i] === automata2[i]) {
+          stroke(255);
+        }
+        if (automata1[i] !== automata2[i]) {
+          stroke(255, 0, 0);
+        }
       } else {
         stroke(255);
       }
@@ -88,7 +92,7 @@ function draw() {
 
   }
 
-  for (var i = automata1.length - 1; i >= 0; i--) {
+  for (let i = automata1.length - 1; i >= 0; i--) {
     automata1[i] = automata2[i];
   }
   // if (frameCount % matasize == matasize-1){
@@ -99,13 +103,13 @@ function draw() {
 function initialize() {
 
   if (randomizedStart) {
-    for (var i = automata2.length - 1; i >= 0; i--) {
+    for (let i = automata2.length - 1; i >= 0; i--) {
       automata1[i] = random(2) | 0;
       automata2[i] = 0;
       automata0[i] = 0;
     }
   } else {
-    for (var i = automata2.length - 1; i >= 0; i--) {
+    for (let i = automata2.length - 1; i >= 0; i--) {
       automata1[i] = 0;
       automata2[i] = 0;
       automata0[i] = 0;

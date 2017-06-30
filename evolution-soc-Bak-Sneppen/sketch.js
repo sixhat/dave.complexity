@@ -15,7 +15,7 @@ function setup() {
   restartPopulation();
 
   sliderRange(1, 40, 1);
-  gui = createGui("Bak-Sneppen", 10, 10);
+  gui = createGui('Bak-Sneppen', 10, 10);
   gui.addGlobals('framesPerSecond', 'speciesSize', 'drawOrigin');
 }
 
@@ -36,12 +36,12 @@ function draw() {
   // 
   // 
   if (drawOrigin) {
-    for (var i = population.length - 1; i >= 0; i--) {
+    for (let i = population.length - 1; i >= 0; i--) {
       strokeHsluv(population[i] * 160, 80, 35);
       line(i, (1 - population[i]) * 500, i, (1 - populationOrigin[i]) * 500);
     }
   }
-  for (var i = population.length - 1; i >= 0; i--) {
+  for (let i = population.length - 1; i >= 0; i--) {
     fillHsluv(population[i] * 160, 100, 80);
     strokeHsluv(population[i] * 160, 80, 60);
     if (i === die) {
@@ -65,7 +65,7 @@ function draw() {
 }
 
 function restartPopulation() {
-  for (var i = population.length - 1; i >= 0; i--) {
+  for (let i = population.length - 1; i >= 0; i--) {
     population[i] = random();
     populationOrigin[i] = population[i];
   }
