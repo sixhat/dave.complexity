@@ -1,6 +1,7 @@
 var matasize = 500,
   automata1 = new Array(matasize),
   automata2 = new Array(matasize),
+  automata0 = new Array(matasize),
   rule = 110,
   framesPerSecond = 30,
   randomizedStart = false,
@@ -104,11 +105,13 @@ function initialize() {
     for (var i = automata2.length - 1; i >= 0; i--) {
       automata1[i] = random(2) | 0;
       automata2[i] = 0;
+      automata0[i] = 0;
     }
   } else {
     for (var i = automata2.length - 1; i >= 0; i--) {
       automata1[i] = 0;
       automata2[i] = 0;
+      automata0[i] = 0;
     }
     automata1[400] = 1;
   }
