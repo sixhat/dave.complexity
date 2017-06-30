@@ -3,7 +3,8 @@ var matasize = 500,
   automata2 = new Array(matasize),
   rule = 110,
   framesPerSecond = 30,
-  randomizedStart = false;
+  randomizedStart = false,
+  colorDifferent = false;
 
 function setup() {
   var canvas =createCanvas(matasize, matasize);
@@ -22,7 +23,7 @@ function setup() {
 
   sliderRange(1, 255, 1);
   gui = createGui("Sandpile", 10, 10);
-  gui.addGlobals('framesPerSecond', 'rule', 'randomizedStart');
+  gui.addGlobals('framesPerSecond', 'rule', 'randomizedStart', 'colorDifferent');
 
 }
 
@@ -42,10 +43,7 @@ function draw() {
     noStroke();
     fill(0);
     rect(i, frameCount % matasize, matasize, 1);
-    if (automata1[i]) {
-      stroke(255);
-      point(i, frameCount % matasize);
-    }
+
 
     var _prev = "" + automata1[(i + matasize - 1) % matasize] + automata1[i] + automata1[(i + 1) % matasize];
     // print(i,_prev);
@@ -76,7 +74,21 @@ function draw() {
       automata2[i] = parseInt(ruleString[7]);
       break;
     }
+
+     if (automata1[i]) {
+      if (colorDifferent){
+        if (automata1[i]===automata2[i]) stroke(255);
+        if (automata1[i]!==automata2[i]) stroke(255,0,0);  
+      } else {
+        stroke(255);
+      }
+      
+      point(i, frameCount % matasize);
+    }
+
   }
+
+
 
   for (var i = automata1.length - 1; i >= 0; i--) {
     automata1[i] = automata2[i];

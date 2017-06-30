@@ -1,6 +1,6 @@
 # dave.Complexity 
 
-version 0.3.2
+version 0.3.3
 
 [dave.Complexity](https://github.com/sixhat/dave.complexity) is a set of toy-models
 written in [p5](https://p5js.org/) that illustrate topics in complex systems.
