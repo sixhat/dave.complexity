@@ -3,7 +3,7 @@ var sandpile = new Array(500),
   radius = 1,
   side = 1,
   gui,
-  framesPerSecond;
+  framesPerSecond=4;
 
 function setup() {
   var canvas = createCanvas(500, 500);
@@ -13,8 +13,6 @@ function setup() {
   pixelDensity(1);
   background(0);
   restart();
-  framesPerSecond = 4;
-  // frameRate(2);
   sliderRange(1, 60, 1);
   gui = createGui('Sandpile', 10, 10);
   gui.addGlobals('framesPerSecond');
@@ -41,7 +39,7 @@ function draw() {
 
   // if (frameCount % 60 === 1) {
   for (let i = 250 - radius; i < 251 + radius; i++) {
-    for (var j = 250 - radius; j < 251 + radius; j++) {
+    for (let j = 250 - radius; j < 251 + radius; j++) {
       push();
       translate((i - 250) * side - side / 2, (j - 250) * side - side / 2);
       if (sandpile[i][j]) {
@@ -77,7 +75,7 @@ function draw() {
 function topple() {
   var repeat = false;
   for (let i = 250 - radius; i < 251 + radius; i++) {
-    for (var j = 250 - radius; j < 251 + radius; j++) {
+    for (let j = 250 - radius; j < 251 + radius; j++) {
 
       if (sandpile[i][j] === toppleValue) {
         if (i === 250 - radius || j === 250 - radius || i === 249 + radius || j === 249 + radius) {
