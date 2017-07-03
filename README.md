@@ -5,7 +5,7 @@ version 0.4.0
 [dave.Complexity](https://github.com/sixhat/dave.complexity) is a set of toy-models
 written in [p5](https://p5js.org/) that illustrate topics in complex systems.
 
-<img src="images/sandpile.png"><img src="images/automata1D.png"><img src="images/bak-sneppen.png"><img src="images/koch-cesaro-fractals">
+<img src="images/sandpile.png"><img src="images/automata1D.png"><img src="images/bak-sneppen.png"><img src="images/koch-cesaro-fractals.png">
 
 Each folder consists of one example. 
 
