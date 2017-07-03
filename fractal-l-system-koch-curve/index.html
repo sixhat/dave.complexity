@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <script src="libs/quicksettings.js"></script>
+    <script src="libs/p5.gui.js"></script>
+    
+    
+    <script src="libs/hsluv.min.js"></script>
+    <script src="libs/p5.dave.js"></script>
+    <script src="sketch.js"></script>
+    <script src="Lsystem.js"></script>
+  <style> 
+    * {
+      font-family: 'PT Sans', sans-serif;
+    }
+    body {padding: 0; margin: 0; background: black; text-align: center; } 
+    div#description {
+      max-width: 700px;
+      color: lightgray;
+      margin: 0 auto;
+      text-align: justify;
+      padding: 20px;
+    }
+    em, A {
+      color:teal;
+      text-decoration: none;
+    }
+  </style>
+  <title>Koch Curve and Cesàro fractals</title>
+  </head>
+  <body>
+    <div id='p5-canvas-holder'></div>
+    <div id='description'>
+      <h1>Koch Curve and Cesàro fractals as L-Systems</h1>
+        <p>Visit <a href="https://en.wikipedia.org/wiki/Koch_snowflake">Wikipedia</a> for more details.</p>
+      <p>The Koch Curve (and Cesàro's) is a fractal created by recursevely breaking a line in three parts and replacing the middle segment with two of the same length at 60 degrees. The process is repeated as many times as neccessary.
+
+      The Koch Curve is generalized by the Cesàro as the grammar used in the L-System is the same. The difference between the two cases is the drawing part, where the <em>turnAngle</em> of the Cesàro's curve is usually chosen to be 85 degrees (typical range 60–90). </p>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Use the sliders to change the <em>turnAngle</em> of the simulation</li>
+        <li>Click in the simulation to restart or to iterate the process.</li>
+      </ul>
+    </div>
+  </body>
+</html>

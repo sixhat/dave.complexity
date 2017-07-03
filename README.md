@@ -1,6 +1,6 @@
 # dave.Complexity 
 
-version 0.3.3
+version 0.4.0
 
 [dave.Complexity](https://github.com/sixhat/dave.complexity) is a set of toy-models
 written in [p5](https://p5js.org/) that illustrate topics in complex systems.
@@ -14,13 +14,13 @@ Each folder consists of one example.
 * [Sandpile](https://www.sixhat.net/p5/dave.complexity/sandpile-Bak-Tang-Wiesenfeld/)
 * [1D automata](https://www.sixhat.net/p5/dave.complexity/automata-1D/)
 * [Bak-Sneppen species evolution](https://www.sixhat.net/p5/dave.complexity/evolution-soc-Bak-Sneppen/)
+* [Koch curve and Cesàro fractals](https://www.sixhat.net/p5/dave.complexity/fractal-l-system-koch-curve/)
 
 ## Not Implemented Yet (@todo)
 
 * Forest Fire
 * 2D Life (SxBy) version
 * Fractals
-* Koch curve or snowflake
 * Sponge
 * Boids
 * Swarm Intelligence
