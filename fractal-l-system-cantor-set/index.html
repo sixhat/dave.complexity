@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <script src="libs/quicksettings.js"></script>
+    <script src="libs/p5.gui.js"></script>
+    
+    
+    <script src="libs/hsluv.min.js"></script>
+    <script src="libs/p5.dave.js"></script>
+    <script src="sketch.js"></script>
+  <style> 
+    * {
+      font-family: 'PT Sans', sans-serif;
+    }
+    body {padding: 0; margin: 0; background: black; text-align: center; } 
+    div#description {
+      max-width: 700px;
+      color: lightgray;
+      margin: 0 auto;
+      text-align: justify;
+      padding: 20px;
+    }
+    em, A {
+      color:teal;
+      text-decoration: none;
+    }
+  </style>
+  <title>Cantor Set</title>
+  </head>
+  <body>
+    <div id='p5-canvas-holder'></div>
+    <div id='description'>
+      <h1>Cantor Set</h1>
+ from <a href="https://en.wikipedia.org/wiki/Cantor_set">Wikipedia</a>:
+      <blockquote>
+       ``In mathematics, the Cantor set is a set of points lying on a single line segment that has a number of remarkable and deep properties. It was discovered in 1874 by Henry John Stephen Smith and introduced by German mathematician Georg Cantor in 1883.<br/>
+Through consideration of this set, Cantor and others helped lay the foundations of modern point-set topology. Although Cantor himself defined the set in a general, abstract way, the most common modern construction is the Cantor ternary set, built by removing the middle thirds of a line segment.''
+      </blockquote>
+      <h2>Instructions</h2>
+      <ul>
+         <li>Click in the simulation to iterate over the Cantor Set</li>
+      </ul>
+      <h2>Contributing:</h2>
+      <p>Sugestions, comments, and contributions are welcome: The <a href="https://github.com/sixhat/dave.complexity">dave.Complexity</a> project is hosted at github and setup for your help</p>
+    </div>
+
+
+<div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1764730-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+  </body>
+</html>
