@@ -1,16 +1,3 @@
-// A couple of functions from https://programmingdesignsystems.com/color/perceptually-uniform-color-spaces/index.html#perceptually-uniform-color-spaces-e7zMSWy
-// for perceptually uniform color spaces
-
-function fillHsluv(h, s, l) {
-  var rgb = hsluv.hsluvToRgb([h, s, l]);
-  fill(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
-}
-
-function strokeHsluv(h, s, l) {
-  var rgb = hsluv.hsluvToRgb([h, s, l]);
-  stroke(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
-}
-
 //  A simple Grid System to place over drawings
 class Grid {
   constructor(){
@@ -37,10 +24,50 @@ class Grid {
     }
     pop();
   }
+  clear(){
+    this.clearHorizontal();
+    this.clearVertical();
+    this.clearRectangles();
+    this.color = color("#FF00FFAA");
+  }
+  clearHorizontal(){
+    this.horizontal = [];
+  }
+  clearVertical(){
+    this.vertical = [];
+  }
+  clearRectangles(){
+    this.rectangles = [];
+  }
 }
 
-// A Simple LSystem Generator
-//
+class Dave {
+  // Short version of functions bellow.
+  constructor(){
+    this.grid=new Grid();
+    this.g = this.grid;
+  }
+  f(h, s, l) {
+    this.fillHsluv(h,s,l);
+  }
+  s(h, s, l) {
+    this.strokeHsluv(h,s,l);
+  }
+  // Long named versions of function where the real implementation happens.
+  fillHsluv(h, s, l) {
+    var rgb = hsluv.hsluvToRgb([h, s, l]);
+    fill(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
+  }
+  strokeHsluv(h, s, l) {
+    var rgb = hsluv.hsluvToRgb([h, s, l]);
+    stroke(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
+  }
+}
+
+
+// A couple of functions from https://programmingdesignsystems.com/color/perceptually-uniform-color-spaces/index.html#perceptually-uniform-color-spaces-e7zMSWy
+// for perceptually uniform color spaces
+
 function LSystem(system) {
   this.alphabet = system.alphabet;
   this.startString = system.axiom;
