@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script> -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
-    <script src="libs/quicksettings.js"></script>
-    <script src="libs/p5.gui.js"></script>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script> -->
 
+  <script src="libs/quicksettings.js"></script>
+  <script src="libs/p5.gui.js"></script>
 
-    <script src="libs/hsluv.min.js"></script>
-    <script src="libs/p5.dave.js"></script>
-    <script src="sketch.js"></script>
-    <script src="Lsystem.js"></script>
+  <script src="libs/hsluv.min.js"></script>
+  <script src="libs/p5.dave.js"></script>
+  <script src="sketch.js"></script>
+  <script src="Lsystem.js"></script>
   <style>
     * {
-      font-family: 'PT Sans', sans-serif;
+      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     }
-    body {padding: 0; margin: 0; background: black; text-align: center; }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background: black;
+      text-align: center;
+      font-size: 18px;
+    }
+
     div#description {
       max-width: 700px;
       color: lightgray;
@@ -26,41 +33,51 @@
       text-align: justify;
       padding: 20px;
     }
-    em, A {
-      color:teal;
+
+    em,
+    A {
+      color: teal;
       text-decoration: none;
     }
   </style>
   <title>Koch Curve and Cesàro fractals</title>
-  </head>
-  <body>
-    <div id='p5-canvas-holder'></div>
-    <div id='description'>
-      <h1>Koch Curve and Cesàro fractals as L-Systems</h1>
-        <p>Visit <a href="https://en.wikipedia.org/wiki/Koch_snowflake">Wikipedia</a> for more details.</p>
-      <p>The Koch Curve (and Cesàro's) is a fractal created by recursively breaking a line in three parts and replacing the middle segment with two of the same length at 60 degrees. The process is repeated as many times as necessary.</p>
+</head>
 
-      <p>The Koch Curve is generalised by the Cesàro as the grammar used in the L-System is the same. The difference between the two cases is the drawing part, where the turnAngle of the Cesàro's curve is usually chosen to be 85 degrees (typical range 60–90).</p>
-      <h2>Instructions</h2>
-      <ul>
-        <li>Use the sliders to change the <em>turnAngle</em> of the simulation</li>
-        <li>Click in the simulation to restart or to iterate the process.</li>
-      </ul>
-      <h2>Contributing:</h2>
-      <p>Sugestions, comments, and contributions are welcome: The <a href="https://github.com/sixhat/dave.complexity">dave.Complexity</a> project is hosted at github and setup for your help</p>
-    </div>
+<body>
+  <div id='p5-canvas-holder'></div>
+  <div id='description'>
+    <h1>Koch Curve and Cesàro fractals as L-Systems</h1>
+    <p>Visit <a href="https://en.wikipedia.org/wiki/Koch_snowflake">Wikipedia</a> for more details.</p>
+    <p>The Koch Curve (and Cesàro's) is a fractal created by recursively breaking a line in three parts and replacing the middle segment with two of the same length at 60 degrees. The process is repeated as many times as necessary.</p>
 
-<div>
+    <p>The Koch Curve is generalised by the Cesàro as the grammar used in the L-System is the same. The difference between the two cases is the drawing part, where the turnAngle of the Cesàro's curve is usually chosen to be 85 degrees (typical range 60–90).</p>
+    <h2>Instructions</h2>
+    <ul>
+      <li>Use the sliders to change the <em>turnAngle</em> of the simulation</li>
+      <li>Click in the simulation to restart or to iterate the process.</li>
+    </ul>
+    <h2>Contributing:</h2>
+    <p>Sugestions, comments, and contributions are welcome: The <a href="https://github.com/sixhat/dave.complexity">dave.Complexity</a> project is hosted at github and setup for your help</p>
+  </div>
+
+  <div>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-1764730-11', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-1764730-11', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </div>
+</body>
 
-</script>
-</div>
-  </body>
 </html>
